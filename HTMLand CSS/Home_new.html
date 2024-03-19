@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://drive.google.com/uc?export=view&id=1QWXlNv0LxyzciI_V_RRLgqnuEngeVJQK" type="image/x-icon">
+  <title>Nachiket Palekar</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+    * {
+      color: black;
+    } 
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img1, .info {
+      animation: fadeIn 5s ease-in-out; /* Apply fade-in animation to the image and text */
+    }
+    .img1 {
+      position: fixed;
+      left: 10%;
+      top: 27%;
+      width: 400px;
+      height: auto;
+      border-radius: 50px;
+      filter: drop-shadow(10px 10px 20px #5EDFFF);
+      z-index: 10;
+    }
+    .info {
+      font-family: 'Kalam', cursive;
+      font-weight:bolder;
+      opacity: 0; /* Initially set the opacity to 0 for fade-in effect */
+      animation: slideInRight 6s ease-in-out forwards; /* Apply right slide animation to the text */
+      position: relative;
+      left: 9%;
+      right: 10%;
+      z-index: 17;
+    }
+    .info h1{
+      font-family: 'Kalam', cursive;
+      font-weight: normal;
+    }
+    span h1, h2 {
+      font-style: italic;
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+    span{
+      font-family: 'Fondamento', cursive;
+      letter-spacing:0px;
+    }
+    button {
+      padding: 5px 50px;
+      margin-top: 2%;
+      font-size: medium;
+      background-color: #3E64FF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-family: sans-serif;
+      font-style: italic;
+    }
+
+    /* Hover effect */
+    button:hover {
+      background-color: #25009d;
+      box-shadow: 0 0 110px #5EDFFF;
+    }
+
+    /* Glowing effect using keyframes */
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 10px #ff0000;
+      }
+      50% {
+        box-shadow: 0 0 20px #cc1a1a;
+      }
+      100% {
+        box-shadow: 0 0 10px #d73200;
+      }
+    }
+
+    /* Apply glowing effect on button when active (clicked) */
+    button:active {
+      animation: glowing 1s infinite;
+    }
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      z-index: 999;
+    }
+    .loader {
+      transform: rotateZ(45deg);
+      perspective: 1000px;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      color: #fff;
+    }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+    @keyframes spin {
+      0%,
+      100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+      }
+      12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+      }
+      25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+      }
+      37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+      }
+      50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+      }
+      62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+      }
+      75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+      }
+      87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .img1{
+        top: 30%;
+        left: 3%;
+      }
+    
+      .info{
+        top: 14%;
+        font-size:medium;
+        left: 16%;
+      }
+      button{
+        padding: 5px 14px;
+      }
+    }
+   
+    @media(max-width:778px){
+
+      .img1{
+        top: 20%;
+        width: 200px;
+        left: 30%;
+      }
+      .info{
+        top: 14%;
+        font-size:small;
+        left: -4%;
+        right: 0;
+      }
+      button{
+        padding: 5px 11px;
+      }
+    }
+  @media(max-width:435px){
+    .img1{
+      left: 17%;
+    }
+  }
+  </style>
+ 
+</head>
+<body id="bodyy">
+  <div class="loader-container">
+    <span class="loader"></span>
+  </div>
+  <div>
+    <img src="https://media.licdn.com/dms/image/D4D03AQEaXRoE9ECA_g/profile-displayphoto-shrink_400_400/0/1707572621704?e=1713398400&v=beta&t=O94qoTLVJpv05O3QNiM_aTgZbju9h1em6K33033jeJQ" alt="my_image" class="img1">
+  </div>
+  <div class="info">
+    <h1>HI</h1>
+    <h2>I am <span>Nachiket Vaibhav Palekar</span></h2>
+    <h2>welcome to my website</h2>
+    <a href="#" target="_parent">
+      <button>Check Home page</button>
+    </a>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+      document.querySelector('.loader-container').style.display = 'none';
+    });
+  </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+   <script>
+   VANTA.CLOUDS({
+     el: "#bodyy",
+     mouseControls: true,
+     touchControls: true,
+     gyroControls: false,
+     minHeight: 200.00,
+     minWidth: 200.00,
+     skyColor: 0x57f2,
+     cloudColor: 0xd2dbe3,
+     sunColor: 0xf5ff18,
+     sunGlareColor: 0xff3030,
+     sunlightColor: 0xffa530,
+     speed: 1.50
+   })
+   </script>
+</body>
+</html>

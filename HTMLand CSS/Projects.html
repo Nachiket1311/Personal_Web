@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1QWXlNv0LxyzciI_V_RRLgqnuEngeVJQK" type="image/x-icon">
+    <title>Nachiket Palekar</title>
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Acme', sans-serif;;
+}
+
+:root{
+  --text-color: #f70000;
+  /*--background-color: linear-gradient(to right, #fed7e1, #c3c2ff);*/
+  /* background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0); */
+
+
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background: transparent;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+  padding: 0 5rem;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:transparent;
+  margin-top: 25px;
+  box-shadow: #B2FCFF 0px 20px 15px;
+
+}
+
+.navbar{
+  padding-left: 60%;
+}
+.navbar-list {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  transition: all 0.4s ease;
+  letter-spacing: 0.1rem;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: #224dfc;
+}
+
+.mobile-navbar-btn {
+  display: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 4rem;
+  height: 4rem;
+  color: black;
+}
+
+.mobile-nav-icon[name="close"] {
+  display: none;
+}
+
+/* ===========================================
+Hero and Service Section Start
+======================================= */
+
+.section-services{
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  width: 100vw;
+}
+.hero h3{
+  color: black;
+  font-size: 36px;
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  text-shadow: 0px 0px 50px #5EDFFF,0px 0px 50px #5EDFFF;
+  transition: all 0.5s ease;
+}
+.hero h3:hover{
+  text-decoration: underline;
+}
+.container1{
+  z-index: 1;
+  background-color:transparent;
+  color: black;
+  width: 50vh;
+  display: block;
+  border: 1px;
+  border-color: black;
+  border-style:dashed;
+  text-wrap: wrap;
+  left: 7%;
+  top: 30vh;
+  position: absolute;
+  transition: background-color 1s ease, box-shadow 0.5s ease;
+}
+.container1 p{
+  margin-left: 12px;
+  margin-right: 12px;
+  text-align:justify;
+  color: black;
+  font-size: medium;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.container1 h5{
+  margin-left: 11px;
+  margin-bottom: 7px;
+  font-size: small;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+.container1 img{
+  position: relative;
+  left: 7.5vh;
+}
+.container1:hover {
+  background-color:rgba(162, 0, 255, 0.329);
+  box-shadow:rgba(0, 94, 255, 0.967) 0px 0px 70px;
+  cursor:auto;
+  }
+
+/* ===========================================
+Responsive Codes 
+======================================= */
+
+/* 980px  */
+@media (max-width: 62em) {
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+    color: black;
+  }
+
+  .header {
+    position: relative;
+  }
+
+  
+  .navbar {
+    z-index: 999;
+    /* display: none; */
+    width: 100%;
+    height: 100vh;
+    background: #434343;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content:left;
+    align-items:center;
+
+    /* to get the tranisition  */
+    transform: translateX(100%);
+    transition: all 0.5s linear;
+
+    opacity: 100%;
+    visibility: hidden;
+    pointer-events:none;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items:start;
+  }
+
+  .active .navbar {
+    transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
+    pointer-events: auto;
+  }
+ 
+  .active .mobile-navbar-btn .mobile-nav-icon[name="close"] {
+    display: block;
+  }
+
+  .active .mobile-navbar-btn .mobile-nav-icon[name="menu"] {
+    display: none;
+  }
+ 
+.hero h1{
+  font-size:300% ;
+}
+}
+
+/* Below 560px  */
+@media (max-width: 35em) {
+  .header {
+    padding: 0 2.4rem;
+  }
+
+  .header .logo {
+    width: 60%;
+  }
+}
+    </style>
+  </head>
+  <body id="bodyy">
+    <header class="header">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="#">Home</a></li>
+          <li><a class="navbar-link" href="#">About Us</a></li>
+          <li><a class="navbar-link" href="#">Blog</a></li>
+          <li><a class="navbar-link" href="#">Gallery</a></li>
+          <li><a class="navbar-link" href="#" target="_blank">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-navbar-btn">
+        <ion-icon name="menu" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close" class="mobile-nav-icon"></ion-icon>
+      </div>
+    </header>
+   
+
+    <!-- ======================================== 
+          Our Main Hero Section Start  
+    ========================================  -->
+  
+    <section class="section-services container">
+      <div class="hero">
+        <h3>My Projects</h3>
+       <div class="container1">
+        <img src="C:/Users/User1234/OneDrive - Shri Vile Parle Kelavani Mandal/College/community service/NGO/working/web/Picture1.png" alt="">
+        <p>As a dedicated team member at Mindstrix Foundation Trust, my community service involves actively engaging in initiatives that uplift and empower. Whether through organizing events, coordinating volunteers, or supporting educational programs, I contribute to our mission of positive change. Working alongside a passionate team, I am committed to making a meaningful impact and fostering a stronger, more connected community.</p>
+        <br>
+        <h5>29=05-2023 to 22-06-2023</h5>
+       </div>
+      </div>
+    </section>
+
+    <!-- ======================================== 
+          Our JavaScript Section Start  
+    ========================================  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+ <!-- <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+       VANTA.NET({
+   el:"#bodyy",
+   mouseControls: true,
+   touchControls: true,
+   gyroControls: false,
+   minHeight: 1000.00,
+   minWidth: 200.00,
+   scale: 1.00,
+   scaleMobile: 1.00,
+   color: 0x4600ff,
+   backgroundColor: 0x0
+ })
+     </script>
+    <script>
+    const mobile_nav = document.querySelector(".mobile-navbar-btn");
+const nav_header = document.querySelector(".header");
+
+const toggleNavbar = () => {
+  // alert("Plz Subscribe ");
+  nav_header.classList.toggle("active");
+};
+
+mobile_nav.addEventListener("click", () => toggleNavbar()); 
+    </script>
+  </body>
+</html>

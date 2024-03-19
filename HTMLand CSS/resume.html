@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css"
+    integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://drive.google.com/uc?export=view&id=1QWXlNv0LxyzciI_V_RRLgqnuEngeVJQK" type="image/x-icon">
+    <title>Nachiket Palekar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+        * {
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(0, 0, 0);
+            z-index: 999;
+        }
+
+        .loader {
+            transform: rotateZ(45deg);
+            perspective: 1000px;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            color: #fff;
+        }
+
+        .loader:before,
+        .loader:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            border-radius: 50%;
+            transform: rotateX(70deg);
+            animation: 1s spin linear infinite;
+        }
+
+        .loader:after {
+            color: #FF3D00;
+            transform: rotateY(70deg);
+            animation-delay: .4s;
+        }
+
+        @keyframes spin {
+            0%,
+            100% {
+                box-shadow: .2em 0px 0 0px currentcolor;
+            }
+
+            12% {
+                box-shadow: .2em .2em 0 0 currentcolor;
+            }
+
+            25% {
+                box-shadow: 0 .2em 0 0px currentcolor;
+            }
+
+            37% {
+                box-shadow: -.2em .2em 0 0 currentcolor;
+            }
+
+            50% {
+                box-shadow: -.2em 0 0 0 currentcolor;
+            }
+
+            62% {
+                box-shadow: -.2em -.2em 0 0 currentcolor;
+            }
+
+            75% {
+                box-shadow: 0px -.2em 0 0 currentcolor;
+            }
+
+            87% {
+                box-shadow: .2em -.2em 0 0 currentcolor;
+            }
+        }
+
+        h1 {
+            position: fixed;
+            top: 9%;
+            left: 5%;
+            margin: 1px;
+        }
+
+        .img1 {
+            position: absolute;
+            top: 0%;
+            width: 300px;
+            left: 87px;
+            top:18%;
+            margin-left: 0;
+            border-radius: 25px;
+            /* Add this line to remove any default margin */
+        }
+
+        .container {
+            position: fixed;
+            top: 18%;
+            left: 430px;
+        }
+        ul.a{
+                list-style-type: none;
+            }
+        .social-container {
+    display: flex;
+    flex-direction:row;
+    gap: 95px;
+}
+
+.item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+    list-style: none;
+}
+
+.item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+.fab {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    transition: .3s;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.878);
+    border: 1px solid rgba(156, 156, 156, 0.256);
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 30%;
+    transition: all .3s;
+}
+
+.insta-bg {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.link-bg {
+    background: rgb(1, 80, 123);
+}
+
+.whats-bg {
+    background: #15a54a;
+}
+
+.pint-bg {
+    background: #E60023;
+}
+.youtube-bg {
+    background: #ff0026;
+}
+
+.face-bg {
+    background: #215eae;
+}
+.gmail-bg {
+    background: #b10000;
+}
+
+.item:hover .bg {
+    transform: rotate(25deg);
+    transform-origin: bottom;
+}
+
+.item:hover .fab {
+    background-color: rgba(156, 156, 156, 0.466);
+}
+
+.item:hover a span:last-child {
+    transform: translateX(60px);
+    width: 100px;
+}
+
+.item a span:last-child {
+    position: absolute;
+    color: white;
+    font-family: 'calibri';
+    width: 0px;
+    overflow: hidden;
+    z-index: -1;
+    top: 10%;
+    transform: translateX(20px);
+    transition: .3s;
+}
+.fa-2x{
+            font-size: 25px;
+            margin-top: 18%;
+            margin-left: 19%;
+          }
+          .wrapper span {
+	position: fixed;
+	bottom: -180px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+	background-color: #18191f;
+	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+	animation: animate 10s linear infinite;
+}
+.wrapper span:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.6s;
+}
+.wrapper span:nth-child(2) {
+	left: 10%;
+	animation-delay: 3s;
+	width: 60px;
+	height: 60px;
+}
+.wrapper span:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+}
+.wrapper span:nth-child(4) {
+	left: 30%;
+	animation-delay: 5s;
+	width: 80px;
+	height: 80px;
+}
+.wrapper span:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+}
+.wrapper span:nth-child(6) {
+	left: 50%;
+	animation-delay: 7s;
+}
+.wrapper span:nth-child(7) {
+	left: 60%;
+	animation-delay: 6s;
+	width: 100px;
+	height: 100px;
+}
+.wrapper span:nth-child(8) {
+	left: 70%;
+	animation-delay: 8s;
+}
+.wrapper span:nth-child(9) {
+	left: 80%;
+	animation-delay: 6s;
+	width: 90px;
+	height: 90px;
+}
+.wrapper span:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: .7;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+          @media (max-width: 1035px){
+            .img1{
+                left: 4%;
+            }
+            .container{
+                font-size:18px;
+                line-height: 20px;
+            }
+            .fa-2x{
+            font-size: 25px;
+            margin-top: 18%;
+            margin-left: 19%;
+          }
+          .fa-brands fa-google-plus-square fa-2x{
+            margin-top: 4%;
+            margin-left: 10%;
+          }
+          .social-container {
+             display: flex;
+             flex-direction:row;
+             gap: 35px;
+          }
+          ul.a{
+                list-style-type: square;
+            }
+          
+        } 
+        @media (max-width: 778px){
+            .img1{
+                display: none;
+            }
+            
+            .container{
+                left: auto;
+                left: 5%;
+            }
+            .social-container {
+             display: flex;
+             flex-direction:row;
+             gap: 50px;
+}
+ul.a{
+                list-style-type: none;
+            }
+        }
+        @media (max-width: 435px){
+            .img1{
+                display: none;
+            }
+            .container{
+                left: auto;
+                left: 5%;
+                font-size:13px;
+                line-height: 20px;
+            }
+            ol{
+                padding-inline-start: 5px;
+            }
+            ul{
+                padding-inline-start: 25px;
+            }
+            ul.a{
+                list-style-type: square;
+            }
+            .fa-2x{
+            font-size: 25px;
+            margin-top: 18%;
+            margin-left: 19%;
+          }
+          .fa-brands fa-google-plus-square fa-2x{
+            margin-top: 5%;
+            margin-left: 13%;
+          }
+          .social-container {
+             display: flex;
+             flex-direction:row;
+             gap: 15px;
+} 
+
+        }
+        @media (max-width: 395px){
+            .img1{
+                display: none;
+            }
+            .container{
+                left: auto;
+                left: 3%;
+                font-size:11px;
+                line-height: 20px;
+            }
+            .fa-2x{
+            font-size: 25px;
+            margin-top: 18%;
+            margin-left: 19%;
+          }
+          .fa-brands fa-google-plus-square fa-2x{
+            margin-top: 4%;
+            margin-left: 10%;
+          }
+          .social-container {
+             display: flex;
+             flex-direction:row;
+             gap: 15px;
+          }
+          ul.a{
+                list-style-type: square;
+            }
+          
+        }
+        @media (max-width: 340px){
+            .img1{
+                display: none;
+            }
+            .container{
+                left: auto;
+                left: 3%;
+                font-size:x-small;
+                line-height: 25px;
+            }
+          .fa-2x{
+            font-size: 25px;
+            margin-top: 18%;
+            margin-left: 19%;
+          }
+          .social-container {
+             display: flex;
+             flex-direction:row;
+             gap: 8px;
+          }
+          ol{
+                padding-inline-start: 15px;
+            }
+            ul{
+                padding-inline-start: 15px;
+            }
+            ul.a{
+                list-style-type: square;
+            }
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div class="loader-container">
+        <span class="loader"></span>
+    </div>
+    <div class="wrapper">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+        <span></span>
+		<span></span>
+		<span></span>        
+</div>
+    <h1>My Resume</h1>
+    <img src="https://media.licdn.com/dms/image/D4D03AQEaXRoE9ECA_g/profile-displayphoto-shrink_800_800/0/1707572621704?e=1713398400&v=beta&t=HIK_MQBIwLeLySHi2jK1o23WESFOSm-vHr9HBvTPNUY" class="img1">
+    <div class="container">
+        <div>
+            <h3>Education</h3>
+            <ul class="a">
+                <li>Completed Secondary School (10th) Certification with 78 %</li>
+                <li>Completed Higher Secondary (12th) Certification with 61 %</li>
+                <li>Second Year Student in MBA-Tech Program in Computer Science</li>
+            </ul>
+            <h3>Skill</h3>
+            <ul class="a">
+            <li>ui/ux designer</li>
+            <li>graphics designer</li>
+            <li>leadership</li>
+            <li>Programing Skill- HTML/CSS, Java, C/C++, Python, SQL</li>
+            </ul>
+            <h3>Contact</h3>
+            <ul class="social-container">
+                <li class="item">
+                    <a href="https://www.instagram.com/nachiket_palekar/">
+                        <span class="fab fa-instagram"></span>
+                        <span class="bg insta-bg"></span>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="">
+                        <span class="fab fa-linkedin"></span>
+                        <span class="bg link-bg"></span>
+                        <span>Linkedin</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="nachiket.palekar.nmims@gmail.com">
+                        <span class="fa-brands fa-google-plus-square fa-2x" style="opacity: 80%;"></span>
+                        <span class="bg gmail-bg"></span>
+                        
+                        <span>Gmail</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="https://www.facebook.com/nachiketbestplayer">
+                        <span class="fab fa-facebook"></span>
+                        <span class="bg face-bg"></span>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li class="item">
+                  <a href="https://www.youtube.com/@Nachiket_H_Gaming">
+                      <span class="fab fa-youtube"></span>
+                      <span class="bg youtube-bg"></span>
+                      <span>Youtube</span>
+                  </a>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.loader-container').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
