@@ -77,10 +77,94 @@
     }
     main{
         margin-top: 20px;
-        overflow-y:scroll;
+        
     }
     #cform{
         visibility: hidden;
+        position: relative;
+        float: right;
+        margin-right: 50px;
+        top: 50px;
+        width: fit-content;
+        color: white;
+    }
+    #cform .b1{
+        background-color: rgba(100, 148, 237, 0.353);
+        backdrop-filter:blur(4px);
+        border: 0px soild lightblue;
+        border-radius: 10px;
+        padding: 20px;
+        width: inherit;
+    }
+    #cform input{
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        height: 20px;
+        width: 350px;
+        border: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #cform textarea{
+        resize: none;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+    #cform button{
+        height: 40px;
+        padding: 5px;
+        width: 100px;
+        border-radius: 10px;
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #cform textarea:focus,#cform input:focus{
+        background-color: rgba(0, 0, 0, 0.312);
+        color: white;
+        cursor: text;
+        outline: none;
+        padding-left: 10px;
+    }
+    #cform textarea:focus{
+        padding-top: 5px;
+    }
+    #cform button:hover{
+        background-color: black;
+        color: white;
+        transition: all 1s ease;
+    }
+    #cform button:focus{
+        color: blue;
+        transition: none;
+    }
+    #msg{
+        position: absolute;
+        background-color: rgba(100, 148, 237, 0.353);
+        backdrop-filter:blur(4px);
+        width: fit-content;
+        padding: 30px;
+        margin-left: 40px;
+        margin-top: 30px;
+        top: 150px;
+        color: white;
+        visibility:hidden;
+    }
+    #msg h3{
+        padding-bottom: 20px;
+        text-transform: capitalize;
+    }
+    #msg img{
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+    #msg img:hover{
+        cursor: pointer;
     }
 </style>
 <body id="bodyy">
@@ -102,20 +186,46 @@
     </header>
     <main>
         <form action="" id="cform">
+            <div class="b1">
+            <h3 style="text-decoration:underline;">Contact me</h3>
+            <br>
             <h4>First Name:</h4>
-            <input type="text" name="fname" id="fname">
+            <input type="text" name="fname" id="fname" required>
+            <br>
             <br>
             <h4>Last Name:</h4>
-            <input type="text" name="lname" id="lname">
+            <input type="text" name="lname" id="lname" required>
+            <br>
             <br>
             <h4>Email:</h4>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
+            <br>
             <br>
             <h4>Message:</h4>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" cols="60" rows="10" required></textarea>
+            <br>
             <br>
             <button type="submit">Submit</button>
+            </div>
         </form>
+        <div id="msg">
+            <h3>For Connecting With me Visit:</h3>
+            <a href="https://www.facebook.com/nachiketpalekar" target="_blank">
+            <img src="res/Icon/facebook.png" alt="facebook"  title="facebook" class="1">
+            </a>
+            <a href="https://github.com/Nachiket-Palekar" target="_blank">
+            <img src="res/Icon/github.png" alt="github" title="github" class="2">
+            </a>
+            <a href="mailto:nachiket.palekar.nmims@gmail.com" target="_blank">
+            <img src="res/Icon/google.png" alt="gmail" title="gmail" class="3">
+            </a>
+            <a href="https://www.linkedin.com/in/nachiket-palekar-629632249/" target="_blank">
+            <img src="res/Icon/linkedin (1).png" alt="linkedin" title="linkedin" class="4">
+            </a>
+            <a href="https://www.youtube.com/@Nachiket_H_Gaming" target="_blank">
+            <img src="res/Icon/play.png" alt="youtube" title="youtube" class="5">
+            </a>
+        </div>
     </main>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -144,7 +254,7 @@
             document.querySelector('menu').style.visibility = 'visible';
             document.querySelector('header').style.visibility = 'visible';
             document.querySelector('#cform').style.visibility = 'visible';
-
+            document.querySelector('#msg').style.visibility = 'visible';
        });
    </script>
 </body>
