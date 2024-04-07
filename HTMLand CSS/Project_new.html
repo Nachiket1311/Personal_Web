@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="res\Icon.png" type="image/x-icon">
-    <title>Document</title>
+    <title>Nachiket Palekar</title>
 </head>
 <style>
     *{
@@ -13,17 +13,18 @@
     body{
         height: 100vh;
         overflow-y: hidden;
-        
+        background-color: black;
     }
     .loader {
         position: relative;
-        left: 50%;
+        left:45%;
         top: 50%;
-        width: calc(80px / cos(45deg));
+        width: calc(140px / cos(45deg));
         height: 14px;
-        background: repeating-linear-gradient(-45deg,#6200ff 0 15px,#000000 0 20px) left/200% 100%;
+        background: repeating-linear-gradient(-45deg,#6200ff 0 15px,#ffffff 0 20px) left/200% 100%;
         animation: l3 5s infinite linear;
         z-index: 999;
+        
     }
 
     @keyframes l3 {
@@ -33,54 +34,160 @@
         padding-top: 5px;
         color: white;
         height: fit-content;
-        background-color: lightblue;
+        padding-bottom: 5px;
+        visibility: hidden;
+        box-shadow: 0 0 10px lightgray,0 0 15px rgba(211, 211, 211, 0.67),0 0 20px rgba(211, 211, 211, 0.462),0 0 25px rgba(211, 211, 211, 0.1);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     #logo{
         padding-left: 18px;
         padding-top: 5px;
-        height: fit-content;
-        visibility: hidden;
+        max-height: fit-content;
+        /* visibility: hidden; */
     }
     #logo img{
-        max-height: 100px;
-        max-width: 100px; 
-        border-radius: 50%;
-        margin: 0%;
-         
+        height: 100px;
+        width: 100px; 
+        border-radius: 45%;
+        margin: 0%; 
     }
-    #logo i{
+    /* #logo i{
         position: absolute;
         top: 50px;
         margin-left: 20px;
+        font-size: large;
+    } */
+    main{
+        margin-top: 20px;
+        overflow-y:scroll;
     }
+    menu ul{
+        position: absolute;
+        top: 50px;
+        right: 15px;
+    }
+    menu ul li{
+        font-size: larger;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: white;
+        padding: 12px;
+        border-radius: 20px;
+    }
+    menu ul li:hover{
+        background-color: rgba(0, 206, 209, 0.718);
+        color:black;
+    }
+    .hero{
+        position: relative;
+        visibility: hidden;
+        float: left;
+        color: white;
+        left: 40px;
+        top: 60px;
+    }
+    .hero #t{
+        margin-bottom: 10px;
+    }
+    .container1{
+        max-width: 300px;
+        border: 1px double white;
+        padding: 10px;
+        text-align: justify;
+        float: inherit;
+    }
+    .container1 img{
+        position: relative;
+        margin-left: 100px;
+        height: 74px;
+
+    }
+    .container2{
+        margin-left: 20px;
+        max-width: 300px;
+        border: 1px double white;
+        padding: 10px;
+        float: inherit;
+        text-align: justify;
+    }
+    .container2 img{
+        position: relative;
+        width: 200px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-bottom: 20px;
+    }
+    footer{
+        visibility: hidden;
+        position: fixed;
+        bottom: 12px;
+        color: white;
+        width: 100%;
+        border-top:1px solid white ;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 20px;
+        z-index: 2;
+    }
+
 </style>
 <body id="bodyy">
     <div class="loader"></div>
     <div class="content">
         <header>
         <div id="logo">
+            <a href="Home_new.html" target="_self">
             <img src="res\Logo_Plane.png" alt="logo">
-            <i>Nachiket Palekar</i>
+            </a>
+            <!-- <i>Nachiket Palekar</i> -->
         </div>
         <menu>
             <ul>
-                <a href="#about"><li>Home</li></a>
-                <a href="#Projects"><li>Home</li></a>
-                <a href="#about"><li>Home</li></a>
-                <a href="#Contact"><li>Home</li></a>
+                <a href="Project_new.html" target="_self"><li>Projects</li></a>
+                <a href="resume.html" target="_self"><li>About</li></a>
+                <a href="#Contact" target="_self"><li>Contact</li></a>
             </ul>
         </menu>
     </header>
     
-    
+    <main>
+       
+            <div class="hero">
+              <h3 id="t">My Projects</h3>
+             <div class="container1">
+              <img src="res/ngo logo.png" alt="NGO Logo">
+              <p>As a dedicated team member at Mindstrix Foundation Trust, my community service involves actively engaging in initiatives that uplift and empower. Whether through organizing events, coordinating volunteers, or supporting educational programs, I contribute to our mission of positive change. Working alongside a passionate team, I am committed to making a meaningful impact and fostering a stronger, more connected community.</p>
+              <br>
+              <h5>29-05-2023 to 22-06-2023</h5>
+             </div>
+             <div class="container2">
+                <img src="res/IdeaHub(white).png" alt="ideahub Logo">
+                <p>Introducing UpSkillNow, your ultimate destination for revolutionizing skill management! 🚀 Say goodbye to outdated methods and welcome a seamless, digitized platform designed to elevate your skill management process to new heights. Whether you're an individual seeking to showcase your talents or a company aiming to streamline employee development, UpSkillNow has you covered. With intuitive features for skill assessment, tracking, and enhancement, along with interactive tools for networking and collaboration, we empower you to unlock your full potential and stay ahead in today's dynamic landscape. Join UpSkillNow now and embark on a journey of continuous growth and success! 💡🌟 &sharp; UpSkillNow #UnlockYourPotential</p>
+                <br>
+                <h5>11-03-24 to 16-03-2024</h5>
+               </div>
+            </div>
+    </main>
+    <footer>
+        <center>
+            &copy; 2024 NachiketPalekar.in | Designed and Developed by Nachiket Palekar
+        </center>
+    </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script>
         window.addEventListener('load', function() {   
             document.querySelector('.loader').style.display = 'none';   
-            document.querySelector('.content').style.display = 'block';
+            document.querySelector('.content').style.visibility = 'block';
             document.getElementById('logo').style.visibility = 'visible';
+            document.querySelector('menu').style.visibility = 'visible';
+            document.querySelector('header').style.visibility = 'visible';
+            document.querySelector('footer').style.visibility = 'visible';
+            document.querySelector('body').style.backgroundColor='transparent';
+            document.querySelector('.hero').style.visibility='visible';
         });
 
         VANTA.NET({
