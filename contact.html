@@ -12,7 +12,7 @@
     }
     body{
         background-color: black;
-        height: 100vh;
+        height: 120vh;
     }
     .loader {
         position: absolute;
@@ -106,8 +106,11 @@
         border: none;
         margin-top: 5px;
         margin-bottom: 5px;
+        padding-left: 12px;
     }
     #cform textarea{
+        width: 400px;
+        padding: 12px;
         resize: none;
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
@@ -129,7 +132,7 @@
         color: white;
         cursor: text;
         outline: none;
-        padding-left: 10px;
+        
     }
     #cform textarea:focus{
         padding-top: 5px;
@@ -165,6 +168,56 @@
     }
     #msg img:hover{
         cursor: pointer;
+    }
+ 
+    @media(max-width:1024px){
+        #cform{
+            float: left;
+            margin-left: 20px;
+        }
+        #cform textarea{
+            width: 400px;
+        }
+        #msg{
+            position: relative;
+            padding: 15px;
+            margin: 15px;
+            float: right;
+            top: 230px;
+        }
+    }
+    @media(max-width:768px){
+        body{
+            height: 145vh;
+        }
+        #msg{
+            float: left;
+            top: 90px;
+            margin-left: 22px;
+        }
+    }
+   @media (max-width:476px) {
+    body{
+        height: 140vh;
+    }
+        #cform{
+            width:355px;
+            margin-left: 10px;
+        }
+        #cform textarea{
+            width: 330px;
+        }
+        #msg{
+            margin-left: 1PX;
+            margin-right: 2px;
+            top: 60px;
+            left: 5px;
+            padding: 8px;
+        }
+        #logo img{
+            width: 80px;
+            height: 80px;
+        }
     }
 </style>
 <body id="bodyy">
@@ -202,7 +255,7 @@
             <br>
             <br>
             <h4>Message:</h4>
-            <textarea name="message" id="message" cols="60" rows="10" required></textarea>
+            <textarea name="message" id="message"  rows="10" required></textarea>
             <br>
             <br>
             <button type="submit">Submit</button>
@@ -236,8 +289,8 @@
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
+      minHeight: 400.00,
+      minWidth: 400.00,
       highlightColor: 0x0,
       midtoneColor: 0x2b00ff,
       lowlightColor: 0xff,
