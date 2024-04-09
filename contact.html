@@ -238,8 +238,11 @@
         </menu>
     </header>
     <main>
-        <form action="" id="cform">
+        <form  method="POST" id="cform">
             <div class="b1">
+            <input type="hidden" name="subject" value="New Submission from Web3Forms">
+            <input type="checkbox" name="botcheck" id="" style="display: none;">
+            <input type="hidden" name="access_key" value="c0825e4b-ed43-4715-b283-b164c1850c69">
             <h3 style="text-decoration:underline;">Contact me</h3>
             <br>
             <h4>First Name:</h4>
@@ -259,8 +262,50 @@
             <br>
             <br>
             <button type="submit">Submit</button>
+
+            <div id="result"></div>
             </div>
         </form>
+        <script>
+            const form = document.getElementById('cform');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+        </script>
         <div id="msg">
             <h3>For Connecting With me Visit:</h3>
             <a href="https://www.facebook.com/nachiketpalekar" target="_blank">
@@ -280,7 +325,7 @@
             </a>
         </div>
     </main>
-   
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
     <script>
