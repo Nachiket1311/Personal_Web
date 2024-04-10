@@ -200,6 +200,27 @@
     body{
         height: 140vh;
     }
+    header{
+            width: auto;
+            margin: 0px;
+            font-size: small;
+        }
+        #logo{
+            position: relative;
+            text-align: center;
+        }
+        menu{
+            position: relative;
+            text-align: center;
+        }
+        menu ul{
+            top: 15px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        menu ul{
+            right: 5px;
+        }
         #cform{
             width:355px;
             margin-left: 10px;
@@ -218,26 +239,16 @@
             width: 80px;
             height: 80px;
         }
-        header{
-            font-size: small;
-        }
+        
     }
     @media(max-width:376px){
+        body{
+            height: 150vh;
+            width: fit-content;
+        }
         header{
-            width: 100%;
+            width: auto;
             margin: 0px;
-        }
-        menu ul{
-            right: 5px;
-        }
-    }
-    @media(max-width:320px){
-        *{
-            font-size: small;
-        }
-        header{
-            height: fit-content;
-            width: 100vw;
         }
         #logo{
             position: relative;
@@ -252,17 +263,37 @@
             position: relative;
             padding-bottom: 20px;
         }
+        menu ul{
+            right: 5px;
+        }
+    }
+    @media(max-width:320px){
+        *{
+            font-size: small;
+        }
+        body{
+            height: 130vh;
+        }
+        header{
+            height: fit-content;
+            width: auto;
+        }
+        #logo{
+            position: relative;
+            text-align: center;
+        }
+       
         #cform input{
-            width: 70vw;
-        }
-        #cform textarea{
-            width: 75vw;
-        }
-        #cform .b1{
             width: 75%;
         }
+        #cform textarea{
+            width: 85%;
+        }
+        #cform .b1{
+            width: 95%;
+        }
         #msg{
-            width: 95vw;
+            width: auto;
         }
         #msg img{
             width: 50px;
