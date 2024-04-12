@@ -60,7 +60,7 @@
     } */
     main{
         margin-top: 20px;
-        overflow-y:scroll;
+        overflow-y:auto;
     }
     menu ul{
         position: absolute;
@@ -97,6 +97,7 @@
         padding: 10px;
         text-align: justify;
         float: inherit;
+        backdrop-filter: blur(15px);
     }
     .container1 img{
         position: relative;
@@ -111,6 +112,7 @@
         padding: 10px;
         float: inherit;
         text-align: justify;
+        backdrop-filter: blur(15px);
     }
     .container2 img{
         position: relative;
@@ -128,14 +130,17 @@
         border-top:1px solid white ;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        backdrop-filter: blur(10px);
         padding: 20px;
         z-index: 2;
     }
     @media(max-width:1024px){
+        body{
+            overflow-y: scroll;
+        }
         main{
             position: absolute;
             height: 100vh;
-            overflow-y: scroll;
             padding: 0%;
             margin: 0%;
             width: 100vw;
@@ -149,20 +154,96 @@
         }
     }
     @media(max-width:768px){
-        *{
+        body{
+            height: 120vh;
+        }
+    }
+    @media(max-width:426px){
+        body{
+            height: 150vh;
+        }
+        #logo{
+            margin: 1%;
+            padding: 1%;
+            text-align: center;
+        }
+        #logo img{
+            position: relative;
+            width: 100px;
+            height: auto;
+            
+            
+        }
+        menu{
+            position: relative;
+            text-align: center;
+        }
+        menu ul{
+            position: relative;
+            top: 50%;
+            padding-left: 0%;
+        }
+        main{
+            position: relative;
+        }
+        .hero{
+            position: absolute;
+            top: 5%;
+            left: 2px;
+        }
+        .container1{
+            margin-bottom: 15px;
+            margin-left: 25px;
+        }
+        .container2{
+            margin-left: 25px;
+            
+        }
+    }
+@media(max-width:376px){
+    body{
+            height: 150vh;
+            width: fit-content;
+        }
+        header{
+            width: 100vw;
+            margin: 0px;
+        }
+        #logo{
+            position: relative;
+            text-align: center;
+        }
+        menu{
+            position: relative;
+            text-align: center;
+        }
+        menu ul{
+            top: 15px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        menu ul{
+            right: 5px;
+        }
+}
+@media(max-width:320px){
+    *{
             font-size: small;
         }
         body{
-            height: 120vh;
-            motion: none;
+            height: 130vh;
         }
-    }
-    @media(max-width:425px){
-        *{
-            overflow-y: scroll;
+        header{
+            height: fit-content;
+            width: 100vw;
         }
-    }
-
+        .container1{
+            width: 80vw;
+        }
+        .container2{
+            width: 80vw;
+        }
+}
 </style>
 <body id="bodyy">
     <div class="loader"></div>
@@ -208,7 +289,7 @@
     </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
     <script>
         window.addEventListener('load', function() {   
             document.querySelector('.loader').style.display = 'none';   
@@ -221,22 +302,20 @@
             document.querySelector('.hero').style.visibility='visible';
         });
 
-        VANTA.NET({
-            el: "#bodyy",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x11ff,
-            backgroundColor: 0x0,
-            points: 20.00,
-            maxDistance: 28.00,
-            spacing: 17.00,
-            showDots: false
-        });
+        VANTA.FOG({
+      el: "#bodyy",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 400.00,
+      minWidth: 400.00,
+      highlightColor: 0x0,
+      midtoneColor: 0x2b00ff,
+      lowlightColor: 0xff,
+      baseColor: 0x0,
+      blurFactor: 0.51,
+      speed: 1.90
+    })
     </script>
 </body>
 
