@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Nachiket Palekar</title>
+    <title>Nachiket Palekar | Web & Mobile App Developer</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of Nachiket Palekar — Web & Mobile App Developer, UI/UX Designer, MBA Tech at NMIMS.">
+    <link rel="shortcut icon" href="images/loc.png" type="image/png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -22,6 +24,107 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Styles for CursorSwarm Detection & Floating Control Pill -->
+    <style>
+      /* Ensure CursorSwarm detects all portfolio elements before building */
+      .ftco-animate {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      /* Floating Agent Control Pill */
+      .cs-control-pill {
+        position: fixed;
+        top: 20px;
+        right: 24px;
+        z-index: 2147483640;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(14, 17, 24, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        padding: 8px 16px;
+        border-radius: 30px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 11.5px;
+        letter-spacing: 0.05em;
+        color: #f1efe9;
+        transition: all 0.3s ease;
+      }
+      .cs-control-pill:hover {
+        background: rgba(18, 22, 32, 0.95);
+        border-color: rgba(0, 255, 156, 0.4);
+      }
+      .cs-indicator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .cs-pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #00ff9c;
+        box-shadow: 0 0 10px #00ff9c;
+        animation: csPulse 1.8s infinite ease-in-out;
+      }
+      @keyframes csPulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.3); opacity: 0.5; }
+      }
+      .cs-btns {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+        padding-left: 10px;
+      }
+      .cs-btn {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+        border-radius: 14px;
+        padding: 4px 10px;
+        font-size: 11px;
+        font-family: inherit;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+      .cs-btn:hover {
+        background: #5E02E6;
+        border-color: #5E02E6;
+        color: #fff;
+        transform: translateY(-1px);
+      }
+      @media (max-width: 600px) {
+        .cs-control-pill {
+          top: auto;
+          bottom: 20px;
+          right: 12px;
+          padding: 6px 12px;
+          font-size: 10px;
+        }
+        .cs-text {
+          max-width: 110px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    </style>
+
+    <!-- Pre-load CursorSwarm script and cloak DOM to avoid content flash -->
+    <script src="js/cursor-swarm.min.js"></script>
+    <script>
+      CursorSwarm.cloak();
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
@@ -163,7 +266,7 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Services</h1>
             <h2 class="mb-4">Services</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <p>Delivering end-to-end digital solutions from concept to deployment with modern frameworks and intuitive design.</p>
           </div>
         </div>
     		<div class="row">
@@ -219,7 +322,7 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Skills</h1>
             <h2 class="mb-4">My Skills</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <p>Continuous learning and hands-on expertise across modern languages, mobile toolchains, and design tools.</p>
           </div>
         </div>
 				<div class="row">
@@ -300,21 +403,21 @@
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">My Projects</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <p>Featured software development projects, hackathon innovations, and web applications.</p>
           </div>
         </div>
-		<div class="row">
-			<div class="col-md">
-				<p>For Project Please Visit Github Profile: &nbsp; <a href="https://github.com/Nachiket1311" target="_blank"><i class="fab fa-github"></i> <b>Nachiket1311</b> </a></p>
+		<div class="row mb-4">
+			<div class="col-md text-center">
+				<p>Explore all repositories on GitHub: &nbsp; <a href="https://github.com/Nachiket1311" target="_blank" class="btn btn-primary py-2 px-4"><i class="fab fa-github mr-2"></i><b>github.com/Nachiket1311</b></a></p>
 			</div>
 		</div>
-    		<!-- <div class="row">
+    		<div class="row">
     			<div class="col-md-4">
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.jpg);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
+	    					<h3><a href="https://github.com/Nachiket1311/Paypal-aegis" target="_blank">PayPal Aegis</a></h3>
+	    					<span>AI-Powered Digital Trust & Payment Protection</span>
 	    				</div>
     				</div>
   				</div>
@@ -322,8 +425,8 @@
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.jpg);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
+	    					<h3><a href="https://github.com/Nachiket1311/Spider-hackathon" target="_blank">BMW Digital Experience</a></h3>
+	    					<span>Spider Hackathon Showcase & Virtual Showroom</span>
 	    				</div>
     				</div>
   				</div>
@@ -332,16 +435,16 @@
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.jpg);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
+	    					<h3><a href="https://github.com/Nachiket1311/WeatherApp" target="_blank">Weather Forecast App</a></h3>
+	    					<span>Android Studio & REST API Integration</span>
 	    				</div>
     				</div>
 
     				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.jpg);">
     					<div class="overlay"></div>
 	    				<div class="text text-center p-4">
-	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-	    					<span>Web Design</span>
+	    					<h3><a href="https://github.com/Nachiket1311/Liveness-Detection-App" target="_blank">Liveness Detection System</a></h3>
+	    					<span>Computer Vision Anti-Spoofing Facial Recognition</span>
 	    				</div>
     				</div>
     			</div>
@@ -351,8 +454,8 @@
 		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.jpg);">
 		    					<div class="overlay"></div>
 			    				<div class="text text-center p-4">
-			    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-			    					<span>Web Design</span>
+			    					<h3><a href="https://github.com/Nachiket1311/financial-sentiment-analysis-lstm" target="_blank">Financial Sentiment Analysis</a></h3>
+			    					<span>Deep Learning LSTM & NLP Model</span>
 			    				</div>
 		    				</div>
 	    				</div>
@@ -360,14 +463,14 @@
 		    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.jpg);">
 		    					<div class="overlay"></div>
 			    				<div class="text text-center p-4">
-			    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-			    					<span>Web Design</span>
+			    					<h3><a href="https://github.com/Nachiket1311/Portal_For_Teachers" target="_blank">Teacher & Student Portal</a></h3>
+			    					<span>Database Management System (DBMS)</span>
 			    				</div>
 		    				</div>
 	    				</div>
     				</div>
     			</div>
-    		</div> -->
+    		</div>
     	</div>
     </section>
 
@@ -378,7 +481,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Blog</h1>
             <h2 class="mb-4">Our Blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <p>Delivering end-to-end digital solutions from concept to deployment with modern frameworks and intuitive design.</p>
           </div>
         </div>
         <div class="row d-flex">
@@ -481,9 +584,8 @@
 				<div class="row justify-content-center">
 					<div class="col-md-7 ftco-animate text-center">
 						<h2>I'm <span>Available</span> for freelancing</h2>
-						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-						<!-- <a href="#contact-section" class="btn btn-primary py-3 px-5" ><p class="mb-0">Hire me</p></a> -->
-						<!-- <a href="#contact-section"><button class="btn btn-primary py-3 px-5">Hire me</button></a> -->
+						<p>Have an ambitious product idea or project? Let's collaborate to build something exceptional.</p>
+						<p><a href="#contact-section" class="btn btn-primary py-3 px-5">Hire Me</a></p>
 					</div>
 				</div>
 			</div>
@@ -495,7 +597,7 @@
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+            <p>Feel free to reach out for collaborations, freelance projects, or technical inquiries.</p>
           </div>
         </div>
 
@@ -615,7 +717,7 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Have Questions?</h2>
             	<div class="block-23 ">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">Mumbai,Maharashtra,India</span></li>
@@ -657,6 +759,264 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+  <!-- FLOATING 8-AGENT CONTROL WIDGET -->
+  <div id="cs-control-pill" class="cs-control-pill">
+    <div class="cs-indicator">
+      <span class="cs-pulse-dot"></span>
+      <span class="cs-text" id="csStatusText">8 Agents Auto-Building</span>
+    </div>
+    <div class="cs-btns">
+      <button id="csPauseBtn" class="cs-btn" title="Pause / Resume Auto-Scroll">
+        <span id="csPauseIcon">⏸</span>
+      </button>
+      <button id="csSpeedBtn" class="cs-btn" title="Toggle Speed">1x</button>
+      <button id="csTopBtn" class="cs-btn" title="Scroll To Top">⬆ Top</button>
+      <button id="csReplayBtn" class="cs-btn" title="Replay Swarm Build">🔄 Replay</button>
+    </div>
+  </div>
+
+  <!-- MULTI-CURSOR AGENT (8 AGENTS) & AUTO-SCROLL CONTROLLER -->
+  <script>
+    (function() {
+      // 1. Force scroll to top on start
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+
+      // 2. Define 8 Distinct AI Agent Personas
+      const AGENT_NAMES = [
+        'ARCHITECT',  // Master layout & structure
+        'FRONTEND',   // UI components & buttons
+        'DESIGNER',   // Styling & cards
+        'ENGINEER',   // Logic & frameworks
+        'TYPIST',     // Typography & headings
+        'MEDIA',      // Photography & images
+        'BUILDER',    // Grid & interactive elements
+        'SYSTEM'      // Orchestration & QA
+      ];
+
+      const AGENT_COLORS = [
+        '#00ff9c',    // Neon Green
+        '#ff2e88',    // Hot Pink
+        '#ffe600',    // Electric Yellow
+        '#2ee6ff',    // Cyan
+        '#a855f7',    // Electric Violet
+        '#ff6b35',    // Bright Orange
+        '#00e5ff',    // Sky Blue
+        '#f43f5e'     // Coral Red
+      ];
+
+      let swarm = null;
+      let autoScrollActive = true;
+      let userInteracted = false;
+      let isReturningToTop = false;
+      let scrollSpeedMultiplier = 1;
+      let rafId = null;
+      let lastTime = performance.now();
+      let buildCompleted = false;
+
+      // 3. Initialize CursorSwarm with 8 Agents
+      function initSwarm() {
+        if (typeof CursorSwarm === 'undefined') {
+          console.warn('CursorSwarm library not found');
+          return;
+        }
+
+        swarm = new CursorSwarm({
+          cursors: 8,
+          names: AGENT_NAMES,
+          colors: AGENT_COLORS,
+          palette: 'neon',
+          deconstruct: false,       // Do NOT dismantle elements when scrolling back up
+          copyPaste: 0.6,           // Agents duplicate repeated components
+          relocation: 0.3,          // Agents assemble and drag elements into position
+          adaptiveSpeed: true,
+          speed: 1.25,
+          hud: true,
+          hudPosition: 'bottom-left',
+          onDone: function() {
+            triggerReturnToTop();
+          }
+        }).init();
+
+        // Start smart auto-scrolling after initial spawn
+        setTimeout(function() {
+          if (!userInteracted && autoScrollActive) {
+            startAutoScroll();
+          }
+        }, 1200);
+      }
+
+      // 4. Adaptive Auto-Scroller
+      function startAutoScroll() {
+        autoScrollActive = true;
+        lastTime = performance.now();
+        const pauseIcon = document.getElementById('csPauseIcon');
+        const statusText = document.getElementById('csStatusText');
+        if (pauseIcon) pauseIcon.textContent = '⏸';
+        if (statusText) statusText.textContent = '8 Agents Auto-Building';
+
+        function scrollLoop(currentTime) {
+          if (!autoScrollActive || userInteracted || isReturningToTop) return;
+
+          const dt = Math.min((currentTime - lastTime) / 1000, 0.1);
+          lastTime = currentTime;
+
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          const currentScroll = window.scrollY;
+
+          // Check if we reached the bottom of the page
+          if (currentScroll >= maxScroll - 6) {
+            handleBottomReached();
+            return;
+          }
+
+          // Adaptive speed: slow down when agents are actively typing/drawing
+          let activeJobs = 0;
+          if (swarm && swarm.records) {
+            activeJobs = swarm.records.filter(function(r) { return r.state === 'building'; }).length;
+          }
+
+          let baseSpeed = 130; // pixels per second
+          if (activeJobs >= 6) {
+            baseSpeed = 70;
+          } else if (activeJobs >= 3) {
+            baseSpeed = 100;
+          } else if (activeJobs === 0) {
+            baseSpeed = 180;
+          }
+
+          const delta = baseSpeed * scrollSpeedMultiplier * dt;
+          window.scrollBy(0, delta);
+
+          rafId = requestAnimationFrame(scrollLoop);
+        }
+
+        rafId = requestAnimationFrame(scrollLoop);
+      }
+
+      function pauseAutoScroll() {
+        autoScrollActive = false;
+        if (rafId) cancelAnimationFrame(rafId);
+        const pauseIcon = document.getElementById('csPauseIcon');
+        const statusText = document.getElementById('csStatusText');
+        if (pauseIcon) pauseIcon.textContent = '▶';
+        if (statusText) statusText.textContent = 'Auto-Scroll Paused';
+      }
+
+      // 5. Bottom Reached & Return-To-Top Handler
+      function handleBottomReached() {
+        const statusText = document.getElementById('csStatusText');
+        if (statusText) statusText.textContent = 'Finalizing All Sections...';
+
+        // Wait until all remaining elements are built
+        const checkInterval = setInterval(function() {
+          const allBuilt = swarm && swarm.records && swarm.records.every(function(r) { return r.state === 'built'; });
+          if (allBuilt || (swarm && swarm.progress >= 0.98)) {
+            clearInterval(checkInterval);
+            triggerReturnToTop();
+          }
+        }, 300);
+      }
+
+      function triggerReturnToTop() {
+        if (buildCompleted) return;
+        buildCompleted = true;
+
+        const statusText = document.getElementById('csStatusText');
+        if (statusText) statusText.textContent = 'Build Complete! Returning to Top ✨';
+
+        // Pause briefly at the bottom so the visitor sees the finished footer
+        setTimeout(function() {
+          isReturningToTop = true;
+          autoScrollActive = false;
+
+          // Smoothly scroll back to the top of the webpage
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+
+          // Once returned to top, mark ready and present the complete website
+          setTimeout(function() {
+            isReturningToTop = false;
+            if (statusText) statusText.textContent = 'Build Complete (8 Agents)';
+            const dot = document.querySelector('.cs-pulse-dot');
+            if (dot) {
+              dot.style.background = '#00e5ff';
+              dot.style.boxShadow = '0 0 10px #00e5ff';
+            }
+          }, 1800);
+        }, 1600);
+      }
+
+      // 6. User Manual Interaction Handling
+      function onUserManualScroll() {
+        if (isReturningToTop) return;
+        if (autoScrollActive) {
+          userInteracted = true;
+          pauseAutoScroll();
+          const statusText = document.getElementById('csStatusText');
+          if (statusText) statusText.textContent = 'Manual Scroll Active';
+        }
+      }
+
+      window.addEventListener('wheel', onUserManualScroll, { passive: true });
+      window.addEventListener('touchmove', onUserManualScroll, { passive: true });
+
+      // 7. Interactive Controls
+      document.addEventListener('DOMContentLoaded', function() {
+        const pauseBtn = document.getElementById('csPauseBtn');
+        const speedBtn = document.getElementById('csSpeedBtn');
+        const topBtn = document.getElementById('csTopBtn');
+        const replayBtn = document.getElementById('csReplayBtn');
+
+        if (pauseBtn) {
+          pauseBtn.addEventListener('click', function() {
+            if (autoScrollActive) {
+              userInteracted = true;
+              pauseAutoScroll();
+            } else {
+              userInteracted = false;
+              startAutoScroll();
+            }
+          });
+        }
+
+        if (speedBtn) {
+          speedBtn.addEventListener('click', function() {
+            if (scrollSpeedMultiplier === 1) {
+              scrollSpeedMultiplier = 2;
+              speedBtn.textContent = '2x';
+            } else if (scrollSpeedMultiplier === 2) {
+              scrollSpeedMultiplier = 0.5;
+              speedBtn.textContent = '0.5x';
+            } else {
+              scrollSpeedMultiplier = 1;
+              speedBtn.textContent = '1x';
+            }
+          });
+        }
+
+        if (topBtn) {
+          topBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+
+        if (replayBtn) {
+          replayBtn.addEventListener('click', function() {
+            location.reload();
+          });
+        }
+
+        // Initialize Swarm
+        initSwarm();
+      });
+    })();
+  </script>
     
   </body>
 </html>
