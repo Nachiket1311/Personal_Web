@@ -31,9 +31,9 @@ This portfolio features an interactive **8-Agent Multi-Cursor Swarm** powered by
    - The webpage smoothly scrolls down automatically, adjusting speed based on active agent workload so visitors can watch each section being drawn, typed, and assembled in real-time.
 3. **Smooth Return to Top**:
    - Once all sections are built and the footer is reached, the page pauses for celebration and smoothly glides back up to the top, presenting the complete, fully interactive portfolio.
-4. **Interactive Floating Control Pill**:
-   - Features real-time agent build indicators, auto-scroll `Pause/Resume`, `Speed (0.5x / 1x / 2x)`, `⬆ Top`, and `🔄 Replay` controls.
-   - Touching the mouse wheel or mobile screen instantly transfers manual scroll control to the user.
+4. **Clean Presentation & User Control**:
+   - The swarm works autonomously in the background without intrusive floating controls, providing an uninterrupted visual experience.
+   - Touching the mouse wheel or mobile screen instantly pauses auto-scroll and transfers full manual scroll control to the user.
 
 ---
 

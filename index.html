@@ -25,98 +25,97 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Styles for CursorSwarm Detection & Floating Control Pill -->
+    <!-- Styles for CursorSwarm Detection & Services Horizontal Layout -->
     <style>
       /* Ensure CursorSwarm detects all portfolio elements before building */
       .ftco-animate {
         opacity: 1 !important;
         visibility: visible !important;
       }
-      
-      /* Floating Agent Control Pill */
-      .cs-control-pill {
-        position: fixed;
-        top: 20px;
-        right: 24px;
-        z-index: 2147483640;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        background: rgba(14, 17, 24, 0.88);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        padding: 8px 16px;
-        border-radius: 30px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(14px);
-        -webkit-backdrop-filter: blur(14px);
-        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-        font-size: 11.5px;
-        letter-spacing: 0.05em;
-        color: #f1efe9;
+
+      /* Services Section: clean horizontal typography & card alignment */
+      .services-1 {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding: 2.4em 1.4em !important;
+        border-radius: 12px;
+        height: 100%;
+        margin-bottom: 30px;
+        background: rgba(255, 255, 255, 0.08) !important;
         transition: all 0.3s ease;
       }
-      .cs-control-pill:hover {
-        background: rgba(18, 22, 32, 0.95);
-        border-color: rgba(0, 255, 156, 0.4);
+      .services-1:hover {
+        background: #5E02E6 !important;
+        transform: translateY(-5px);
+        box-shadow: 0 14px 28px rgba(94, 2, 230, 0.35);
       }
-      .cs-indicator {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+      .services-1 .icon {
+        display: block !important;
+        margin-bottom: 22px !important;
       }
-      .cs-pulse-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #00ff9c;
-        box-shadow: 0 0 10px #00ff9c;
-        animation: csPulse 1.8s infinite ease-in-out;
+      .services-1 .icon i {
+        font-size: 52px !important;
+        line-height: 1 !important;
+        color: #5E02E6 !important;
+        transition: color 0.3s ease;
       }
-      @keyframes csPulse {
-        0%, 100% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.3); opacity: 0.5; }
+      .services-1:hover .icon i {
+        color: #ffffff !important;
       }
-      .cs-btns {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        border-left: 1px solid rgba(255, 255, 255, 0.15);
-        padding-left: 10px;
+      .services-1 .desc {
+        width: 100%;
       }
-      .cs-btn {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        color: #fff;
-        border-radius: 14px;
-        padding: 4px 10px;
-        font-size: 11px;
-        font-family: inherit;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease;
+      .services-1 .desc h3 {
+        display: block !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        letter-spacing: 2px !important;
+        text-transform: uppercase !important;
+        white-space: nowrap !important;
+        margin-bottom: 24px !important;
+        color: #ffffff !important;
+        position: relative;
       }
-      .cs-btn:hover {
+      .services-1 .desc h3:after {
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        right: 0;
+        content: '';
+        width: 32px;
+        height: 2px;
         background: #5E02E6;
-        border-color: #5E02E6;
-        color: #fff;
-        transform: translateY(-1px);
+        margin: 0 auto;
+        transition: background 0.3s ease;
       }
-      @media (max-width: 600px) {
-        .cs-control-pill {
-          top: auto;
-          bottom: 20px;
-          right: 12px;
-          padding: 6px 12px;
-          font-size: 10px;
-        }
-        .cs-text {
-          max-width: 110px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
+      .services-1:hover .desc h3:after {
+        background: #ffffff !important;
+      }
+      .services-1 .desc p {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #a4a4b2;
+        margin-bottom: 0;
+        transition: color 0.3s ease;
+      }
+      .services-1:hover .desc p {
+        color: rgba(255, 255, 255, 0.95);
+      }
+      
+      /* Ensure cursor-swarm spans never stack letters vertically */
+      .services-1 .desc h3 span,
+      .services-1 .desc h3 .cs-c,
+      .services-1 .desc h3 .cs-w,
+      .cs-c {
+        display: inline !important;
+        margin-bottom: 0 !important;
+        white-space: inherit !important;
+      }
+      .cs-w {
+        display: inline-block !important;
+        white-space: nowrap !important;
       }
     </style>
 
@@ -270,49 +269,51 @@
           </div>
         </div>
     		<div class="row">
-					<div class="col-md-4 text-center d-flex ftco-animate">
+					<div class="col-md-3 col-sm-6 text-center d-flex ftco-animate">
+						<a href="#contact-section" class="services-1">
+							<span class="icon">
+								<i class="fas fa-palette"></i>
+							</span>
+							<div class="desc">
+								<h3 data-cs="words">Web Design</h3>
+								<p>Clean UI/UX wireframes, intuitive user flows, and aesthetic interfaces crafted with precision.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-6 text-center d-flex ftco-animate">
+						<a href="#contact-section" class="services-1">
+							<span class="icon">
+								<i class="fas fa-code"></i>
+							</span>
+							<div class="desc">
+								<h3 data-cs="words">Web Development</h3>
+								<p>Responsive, performant web applications using modern web standards and clean code architectures.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-6 text-center d-flex ftco-animate">
 						<a href="#contact-section" class="services-1">
 							<span class="icon">
 								<i class="fas fa-mobile-alt"></i>
 							</span>
 							<div class="desc">
-								<h3 class="mb-5">Web Designer</h3>
+								<h3 data-cs="words">App Development</h3>
+								<p>Cross-platform mobile applications for Android &amp; iOS with seamless native-like performance.</p>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
+					<div class="col-md-3 col-sm-6 text-center d-flex ftco-animate">
 						<a href="#contact-section" class="services-1">
 							<span class="icon">
 								<i class="fas fa-film"></i>
 							</span>
 							<div class="desc">
-								<h3 class="mb-5">Video Editing</h3>
+								<h3 data-cs="words">Video Editing</h3>
+								<p>Cinematic storytelling, motion transitions, color grading, and engaging media presentations.</p>
 							</div>
 						</a>
 					</div>
-					<div class="col-md-4 text-center d-flex ftco-animate">
-						<a href="#contact-section" class="services-1">
-							<span class="icon">
-								<i class="flaticon-ideas"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">Web Developer</h3>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md text-center d-flex ftco-animate">
-						<a href="#contact-section" class="services-1">
-							<span class="icon">
-								<i class="flaticon-analysis"></i>
-							</span>
-							<div class="desc">
-								<h3 class="mb-5">App Developing</h3>
-							</div>
-						</a>
-					</div>
-					
-    	</div>
+    		</div>
     </section>
 
 		
@@ -760,22 +761,6 @@
   
   <script src="js/main.js"></script>
 
-  <!-- FLOATING 8-AGENT CONTROL WIDGET -->
-  <div id="cs-control-pill" class="cs-control-pill">
-    <div class="cs-indicator">
-      <span class="cs-pulse-dot"></span>
-      <span class="cs-text" id="csStatusText">8 Agents Auto-Building</span>
-    </div>
-    <div class="cs-btns">
-      <button id="csPauseBtn" class="cs-btn" title="Pause / Resume Auto-Scroll">
-        <span id="csPauseIcon">⏸</span>
-      </button>
-      <button id="csSpeedBtn" class="cs-btn" title="Toggle Speed">1x</button>
-      <button id="csTopBtn" class="cs-btn" title="Scroll To Top">⬆ Top</button>
-      <button id="csReplayBtn" class="cs-btn" title="Replay Swarm Build">🔄 Replay</button>
-    </div>
-  </div>
-
   <!-- MULTI-CURSOR AGENT (8 AGENTS) & AUTO-SCROLL CONTROLLER -->
   <script>
     (function() {
@@ -834,8 +819,8 @@
           relocation: 0.3,          // Agents assemble and drag elements into position
           adaptiveSpeed: true,
           speed: 1.25,
-          hud: true,
-          hudPosition: 'bottom-left',
+          hud: false,               // Floating controls disabled as requested
+          labels: true,
           onDone: function() {
             triggerReturnToTop();
           }
@@ -853,10 +838,6 @@
       function startAutoScroll() {
         autoScrollActive = true;
         lastTime = performance.now();
-        const pauseIcon = document.getElementById('csPauseIcon');
-        const statusText = document.getElementById('csStatusText');
-        if (pauseIcon) pauseIcon.textContent = '⏸';
-        if (statusText) statusText.textContent = '8 Agents Auto-Building';
 
         function scrollLoop(currentTime) {
           if (!autoScrollActive || userInteracted || isReturningToTop) return;
@@ -900,17 +881,10 @@
       function pauseAutoScroll() {
         autoScrollActive = false;
         if (rafId) cancelAnimationFrame(rafId);
-        const pauseIcon = document.getElementById('csPauseIcon');
-        const statusText = document.getElementById('csStatusText');
-        if (pauseIcon) pauseIcon.textContent = '▶';
-        if (statusText) statusText.textContent = 'Auto-Scroll Paused';
       }
 
       // 5. Bottom Reached & Return-To-Top Handler
       function handleBottomReached() {
-        const statusText = document.getElementById('csStatusText');
-        if (statusText) statusText.textContent = 'Finalizing All Sections...';
-
         // Wait until all remaining elements are built
         const checkInterval = setInterval(function() {
           const allBuilt = swarm && swarm.records && swarm.records.every(function(r) { return r.state === 'built'; });
@@ -925,9 +899,6 @@
         if (buildCompleted) return;
         buildCompleted = true;
 
-        const statusText = document.getElementById('csStatusText');
-        if (statusText) statusText.textContent = 'Build Complete! Returning to Top ✨';
-
         // Pause briefly at the bottom so the visitor sees the finished footer
         setTimeout(function() {
           isReturningToTop = true;
@@ -939,15 +910,8 @@
             behavior: 'smooth'
           });
 
-          // Once returned to top, mark ready and present the complete website
           setTimeout(function() {
             isReturningToTop = false;
-            if (statusText) statusText.textContent = 'Build Complete (8 Agents)';
-            const dot = document.querySelector('.cs-pulse-dot');
-            if (dot) {
-              dot.style.background = '#00e5ff';
-              dot.style.boxShadow = '0 0 10px #00e5ff';
-            }
           }, 1800);
         }, 1600);
       }
@@ -958,61 +922,14 @@
         if (autoScrollActive) {
           userInteracted = true;
           pauseAutoScroll();
-          const statusText = document.getElementById('csStatusText');
-          if (statusText) statusText.textContent = 'Manual Scroll Active';
         }
       }
 
       window.addEventListener('wheel', onUserManualScroll, { passive: true });
       window.addEventListener('touchmove', onUserManualScroll, { passive: true });
 
-      // 7. Interactive Controls
+      // 7. Initialize Swarm on load
       document.addEventListener('DOMContentLoaded', function() {
-        const pauseBtn = document.getElementById('csPauseBtn');
-        const speedBtn = document.getElementById('csSpeedBtn');
-        const topBtn = document.getElementById('csTopBtn');
-        const replayBtn = document.getElementById('csReplayBtn');
-
-        if (pauseBtn) {
-          pauseBtn.addEventListener('click', function() {
-            if (autoScrollActive) {
-              userInteracted = true;
-              pauseAutoScroll();
-            } else {
-              userInteracted = false;
-              startAutoScroll();
-            }
-          });
-        }
-
-        if (speedBtn) {
-          speedBtn.addEventListener('click', function() {
-            if (scrollSpeedMultiplier === 1) {
-              scrollSpeedMultiplier = 2;
-              speedBtn.textContent = '2x';
-            } else if (scrollSpeedMultiplier === 2) {
-              scrollSpeedMultiplier = 0.5;
-              speedBtn.textContent = '0.5x';
-            } else {
-              scrollSpeedMultiplier = 1;
-              speedBtn.textContent = '1x';
-            }
-          });
-        }
-
-        if (topBtn) {
-          topBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-        }
-
-        if (replayBtn) {
-          replayBtn.addEventListener('click', function() {
-            location.reload();
-          });
-        }
-
-        // Initialize Swarm
         initSwarm();
       });
     })();
