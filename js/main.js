@@ -71,6 +71,12 @@
 
 	    var href = $.attr(this, 'href');
 
+	    // Automatically collapse mobile navbar when a link is clicked
+	    if ($('#ftco-nav').hasClass('show')) {
+	    	$('#ftco-nav').collapse('hide');
+	    	$('.js-fh5co-nav-toggle').removeClass('active');
+	    }
+
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
 	    }, 500, function() {

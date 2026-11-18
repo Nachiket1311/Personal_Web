@@ -8181,9 +8181,10 @@ h1, h2, h3, h4, h5,
       padding-left: 15px;
       padding-right: 15px; } }
   .ftco-navbar-light .container {
-    width: 1110px;
+    width: 100%;
+    max-width: 1110px;
     margin: 0 auto;
-    padding: 0; }
+    padding: 0 15px; }
   .ftco-navbar-light .navbar-brand {
     color: #fff;
     padding-top: .7rem;
@@ -8488,7 +8489,8 @@ h1, h2, h3, h4, h5,
               left: 0;
               bottom: 0;
               right: 0;
-              width: 1200px;
+              width: 100%;
+              max-width: 1200px;
               margin: 0 auto; } }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-forth {
@@ -8871,53 +8873,45 @@ h1, h2, h3, h4, h5,
 
 .progress-wrap {
   width: 100%;
-  margin-bottom: 30px; }
-  .progress-wrap h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 500; }
+  margin-bottom: 28px;
+  position: relative; }
+  .progress-wrap .skill-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0;
+    line-height: 1.2; }
+  .progress-wrap .skill-percent {
+    font-size: 16px;
+    font-weight: 600;
+    color: #b388ff;
+    margin-bottom: 0;
+    line-height: 1.2;
+    white-space: nowrap; }
 
 .progress {
   height: 10px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: #1a1a1a;
-  overflow: visible; }
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  background: #181822;
+  overflow: hidden;
+  border-radius: 6px; }
 
 .progress-bar {
-  background: #5E02E6;
+  background: linear-gradient(90deg, #5E02E6 0%, #8c43ff 100%);
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-size: 12px;
-  line-height: 1.2;
-  color: #000000;
-  font-weight: 600;
+  height: 100%;
   position: relative;
-  overflow: visible;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px; }
+  overflow: hidden;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px; }
   .progress-bar:after {
-    position: absolute;
-    top: -2px;
-    right: 0;
-    width: 34px;
-    height: 34px;
-    content: '';
-    background: #5E02E6;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    border-radius: 2px;
-    opacity: 0; }
+    display: none; }
   .progress-bar span {
-    position: absolute;
-    top: -38px;
-    right: 0;
-    font-size: 20px;
-    font-weight: 400;
-    color: #fff; }
+    display: none; }
 
 .ftco-hireme {
   background: #5E02E6;

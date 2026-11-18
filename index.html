@@ -25,8 +25,20 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Styles for CursorSwarm Detection & Services Horizontal Layout -->
+    <!-- Styles for CursorSwarm Detection, Skills Alignment & Full Mobile Responsiveness -->
     <style>
+      /* Prevent horizontal scrolling/overflow on mobile */
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+      .container {
+        width: 100% !important;
+        max-width: 1140px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
       /* Ensure CursorSwarm detects all portfolio elements before building */
       .ftco-animate {
         opacity: 1 !important;
@@ -116,6 +128,250 @@
       .cs-w {
         display: inline-block !important;
         white-space: nowrap !important;
+      }
+
+      /* Skills Section - Percentage Alignment & Modern Progress Bars */
+      .progress-wrap {
+        width: 100%;
+        margin-bottom: 28px !important;
+        position: relative;
+      }
+      .progress-wrap .skill-name {
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        color: #ffffff !important;
+        margin-bottom: 0 !important;
+        line-height: 1.2 !important;
+      }
+      .progress-wrap .skill-percent {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        color: #b388ff !important;
+        margin-bottom: 0 !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.5px !important;
+      }
+      .progress-wrap .progress {
+        height: 10px !important;
+        background: #181824 !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+        margin-top: 8px !important;
+        margin-bottom: 0 !important;
+      }
+      .progress-wrap .progress-bar {
+        background: linear-gradient(90deg, #5E02E6 0%, #8c43ff 100%) !important;
+        border-radius: 8px !important;
+        height: 100% !important;
+        position: relative !important;
+        overflow: hidden !important;
+        transition: width 0.8s ease-in-out !important;
+      }
+      .progress-wrap .progress-bar:after,
+      .progress-wrap .progress-bar span {
+        display: none !important;
+      }
+
+      /* Comprehensive Mobile Optimizations (Tablets & Phones) */
+      @media (max-width: 991.98px) {
+        .ftco-navbar-light {
+          background: #0c0e14 !important;
+          padding: 12px 15px !important;
+        }
+        .ftco-navbar-light .navbar-brand {
+          font-size: 20px !important;
+          color: #fff !important;
+        }
+        .ftco-navbar-light .navbar-collapse {
+          background: #0c0e14;
+          padding: 15px 20px;
+          border-radius: 8px;
+          margin-top: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+          padding: 10px 0 !important;
+          font-size: 15px !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .ftco-navbar-light .navbar-nav > .nav-item:last-child > .nav-link {
+          border-bottom: none;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        /* Section Spacing */
+        .ftco-section {
+          padding: 4.5em 0 !important;
+        }
+        
+        /* Section Headings */
+        .heading-section h2 {
+          font-size: 32px !important;
+          line-height: 1.25 !important;
+          margin-bottom: 14px !important;
+        }
+        .heading-section h1.big {
+          font-size: 44px !important;
+          top: -12px !important;
+          opacity: 0.12 !important;
+        }
+        .heading-section p {
+          font-size: 14px !important;
+          line-height: 1.6 !important;
+          padding: 0 5px !important;
+        }
+        
+        /* Hero Section */
+        .owl-carousel.home-slider .slider-item .slider-text {
+          min-height: 520px !important;
+          height: auto !important;
+          padding-top: 100px !important;
+          padding-bottom: 60px !important;
+        }
+        .owl-carousel.home-slider .slider-item .slider-text h1 {
+          font-size: 32px !important;
+          line-height: 1.25 !important;
+          margin-bottom: 16px !important;
+        }
+        .owl-carousel.home-slider .slider-item .slider-text h2 {
+          font-size: 19px !important;
+          margin-bottom: 24px !important;
+        }
+        .owl-carousel.home-slider .slider-item .slider-text .subheading {
+          font-size: 13px !important;
+          letter-spacing: 2px !important;
+        }
+        
+        /* About Section Image & Info */
+        .ftco-about .img-about {
+          min-height: 380px !important;
+          margin-bottom: 30px !important;
+        }
+        .ftco-about .img-about .img {
+          min-height: 380px !important;
+          background-size: cover !important;
+          background-position: center top !important;
+          border-radius: 12px !important;
+        }
+        .ftco-about ul.about-info {
+          padding-left: 0 !important;
+        }
+        .ftco-about ul.about-info li {
+          display: flex !important;
+          flex-direction: column !important;
+          margin-bottom: 12px !important;
+        }
+        .ftco-about ul.about-info li span:first-child {
+          width: 100% !important;
+          font-size: 13px !important;
+          color: #a855f7 !important;
+          text-transform: uppercase !important;
+          letter-spacing: 1px !important;
+          margin-bottom: 2px !important;
+        }
+        .ftco-about ul.about-info li span {
+          width: 100% !important;
+          word-break: break-word !important;
+          font-size: 15px !important;
+        }
+        
+        /* Resume Section */
+        .resume-wrap {
+          padding: 24px 18px !important;
+          margin-bottom: 20px !important;
+          border-radius: 10px !important;
+        }
+        .resume-wrap h2 {
+          font-size: 19px !important;
+          line-height: 1.35 !important;
+          margin-bottom: 8px !important;
+        }
+        .resume-wrap .date {
+          font-size: 20px !important;
+        }
+        .resume-wrap p {
+          font-size: 14px !important;
+          line-height: 1.6 !important;
+        }
+        
+        /* Services Section */
+        .services-1 {
+          padding: 2em 1.2em !important;
+          margin-bottom: 20px !important;
+        }
+        .services-1 .icon i {
+          font-size: 42px !important;
+        }
+        .services-1 .desc h3 {
+          font-size: 13.5px !important;
+          letter-spacing: 1px !important;
+        }
+        
+        /* Skills Section on Mobile */
+        .progress-wrap {
+          margin-bottom: 22px !important;
+        }
+        .progress-wrap .skill-name {
+          font-size: 16px !important;
+        }
+        .progress-wrap .skill-percent {
+          font-size: 15px !important;
+        }
+        
+        /* Projects Section */
+        .project {
+          height: 240px !important;
+          margin-bottom: 20px !important;
+          border-radius: 12px !important;
+          overflow: hidden !important;
+        }
+        .project .overlay {
+          opacity: 0.75 !important;
+          background: linear-gradient(180deg, rgba(14, 10, 26, 0.4) 0%, rgba(94, 2, 230, 0.88) 100%) !important;
+        }
+        .project .text {
+          opacity: 1 !important;
+          max-width: 92% !important;
+          padding: 16px !important;
+        }
+        .project .text h3 {
+          font-size: 18px !important;
+          line-height: 1.3 !important;
+          margin-bottom: 6px !important;
+        }
+        .project .text span {
+          font-size: 11.5px !important;
+          letter-spacing: 1px !important;
+        }
+        
+        /* Available for Freelancing / Hire Me */
+        .ftco-hireme h2 {
+          font-size: 26px !important;
+          line-height: 1.3 !important;
+        }
+        
+        /* Contact Section */
+        .contact-section .box {
+          margin-bottom: 16px !important;
+          padding: 1.4rem 1rem !important;
+          border-radius: 10px !important;
+        }
+        .contact-section .box p {
+          word-break: break-word !important;
+        }
+        .contact-form {
+          padding: 24px 18px !important;
+          border-radius: 12px !important;
+        }
+        .block-9 .img {
+          min-height: 240px !important;
+          border-radius: 12px !important;
+          margin-top: 24px !important;
+          background-size: cover !important;
+        }
       }
     </style>
 
@@ -329,66 +585,78 @@
 				<div class="row">
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Canva</h3>
+							<div class="skill-header d-flex justify-content-between align-items-center mb-2">
+								<h3 class="skill-name mb-0">Canva</h3>
+								<span class="skill-percent">90%</span>
+							</div>
 							<div class="progress">
 							 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-							    <span>90%</span>
 							  	</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Java</h3>
+							<div class="skill-header d-flex justify-content-between align-items-center mb-2">
+								<h3 class="skill-name mb-0">Java</h3>
+								<span class="skill-percent">75%</span>
+							</div>
 							<div class="progress">
-							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="85"
+							 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="75"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-							    <span>75%</span>
 							  	</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>HTML5</h3>
+							<div class="skill-header d-flex justify-content-between align-items-center mb-2">
+								<h3 class="skill-name mb-0">HTML5</h3>
+								<span class="skill-percent">97%</span>
+							</div>
 							<div class="progress">
-							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+							 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="97"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:97%">
-							    <span>97%</span>
 							  	</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>CSS3</h3>
+							<div class="skill-header d-flex justify-content-between align-items-center mb-2">
+								<h3 class="skill-name mb-0">CSS3</h3>
+								<span class="skill-percent">90%</span>
+							</div>
 							<div class="progress">
 							 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-							    <span>90%</span>
 							  	</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Python</h3>
+							<div class="skill-header d-flex justify-content-between align-items-center mb-2">
+								<h3 class="skill-name mb-0">Python</h3>
+								<span class="skill-percent">60%</span>
+							</div>
 							<div class="progress">
-							 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+							 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="60"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
-							    <span>60%</span>
 							  	</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 animate-box">
 						<div class="progress-wrap ftco-animate">
-							<h3>Kotlin</h3>
+							<div class="skill-header d-flex justify-content-between align-items-center mb-2">
+								<h3 class="skill-name mb-0">Kotlin</h3>
+								<span class="skill-percent">80%</span>
+							</div>
 							<div class="progress">
 							 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
 							  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-							    <span>80%</span>
 							  	</div>
 							</div>
 						</div>
@@ -802,25 +1070,27 @@
       let lastTime = performance.now();
       let buildCompleted = false;
 
-      // 3. Initialize CursorSwarm with 8 Agents
+      // 3. Initialize CursorSwarm with 8 Agents (responsive optimization)
       function initSwarm() {
         if (typeof CursorSwarm === 'undefined') {
           console.warn('CursorSwarm library not found');
           return;
         }
 
+        const isMobile = window.innerWidth < 768;
+
         swarm = new CursorSwarm({
-          cursors: 8,
+          cursors: isMobile ? 3 : 8,
           names: AGENT_NAMES,
           colors: AGENT_COLORS,
           palette: 'neon',
           deconstruct: false,       // Do NOT dismantle elements when scrolling back up
-          copyPaste: 0.6,           // Agents duplicate repeated components
-          relocation: 0.3,          // Agents assemble and drag elements into position
+          copyPaste: isMobile ? 0 : 0.6,
+          relocation: isMobile ? 0 : 0.3,
           adaptiveSpeed: true,
-          speed: 1.25,
+          speed: isMobile ? 1.0 : 1.25,
           hud: false,               // Floating controls disabled as requested
-          labels: true,
+          labels: !isMobile,        // Clean display on small mobile viewports
           onDone: function() {
             triggerReturnToTop();
           }
